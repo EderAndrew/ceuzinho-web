@@ -7,8 +7,7 @@ import {
 } from "@/components/ui/sidebar"
 import { 
     BookHeart,
-    Home, 
-    Settings 
+    Home,
 } from "lucide-react"
 
 const items = [

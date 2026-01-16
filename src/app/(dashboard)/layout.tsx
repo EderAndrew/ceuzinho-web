@@ -17,7 +17,7 @@ export default async function PrivateLayout({
     return (
         <SidebarProvider>
             <AppSidebar />
-            <main>
+            <main className="flex flex-col min-h-screen w-full">
                 <SidebarHeaderApp />
                 {children}
             </main>
