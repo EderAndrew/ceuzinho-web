@@ -2,6 +2,7 @@ import { AppCalendar } from "@/components/app-calendar";
 import { ClassroomCard } from "@/components/classroom-card";
 import { NewClassDialog } from "@/components/newClass-dialog";
 import { Card } from "@/components/ui/card";
+import { Calendar } from "lucide-react";
 
 export default function Dashboard () {
     return (
@@ -17,7 +18,10 @@ export default function Dashboard () {
                 <div className="flex-1 flex flex-col items-center gap-8 justify-center w-full h-full p-6">
                     <Card className="p-4">
                         <div className="flex flex-col gap-4">
-                            <h2 className="text-2xl">Calendário</h2>
+                            <div className="flex items-center gap-2">
+                                <Calendar />
+                                <h2 className="text-2xl">Calendário</h2>
+                            </div>
                             <p className="text-sm text-muted-foreground">Selecione uma data para ver as aulas</p>
                             <AppCalendar />
                         </div>

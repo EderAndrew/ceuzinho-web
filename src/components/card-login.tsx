@@ -21,6 +21,8 @@ import z from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useRouter } from "next/navigation"
+import { signin } from "@/api/user"
+
 
 const formSchema = z.object({
     email: z.email(),
@@ -39,10 +41,13 @@ export const CardLogin = () => {
         }
     })
 
-    const onSubmit = (values: z.infer<typeof formSchema>) => {
-        console.log(values)
-        router.push("/dashboard")
-        
+    const onSubmit = async(values: z.infer<typeof formSchema>) => {
+        try{
+          await signin(values)
+          router.push("/dashboard")
+        }catch(error){
+          console.log(error)
+        }
     }
 
     return (
