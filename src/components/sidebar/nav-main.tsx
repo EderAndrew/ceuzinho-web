@@ -6,20 +6,20 @@ import {
     SidebarMenuItem
 } from "@/components/ui/sidebar"
 import { 
-    BookHeart,
     Home,
+    UsersRound,
 } from "lucide-react"
 
 const items = [
     {
         title: "Home",
-        url: "#",
+        url: "/dashboard",
         icon: Home
     },
     {
         title: "Professores",
-        url: "#",
-        icon: BookHeart
+        url: "/teacher",
+        icon: UsersRound
     }
 ]
 
